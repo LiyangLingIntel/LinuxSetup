@@ -3,10 +3,10 @@
 * Move related files to home folder
 
   ```shell
-  cp .vim/ .vimrc ~/ -r
+  cp .vimrc ~/ -r
   ```
 
-* Check if [vim-plug](https://github.com/junegunn/vim-plug) works, or reinstall it
+* Check if [vim-plug](https://github.com/junegunn/vim-plug) works, and install plugins
 
   ```shell
   :PlugInstall
