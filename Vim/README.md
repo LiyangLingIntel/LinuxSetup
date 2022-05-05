@@ -3,7 +3,7 @@
 * Move related files to home folder
 
   ```shell
-  cp .vimrc ~/ -r
+  cp .vimrc .vim/ ~/ -r
   ```
 
 * Check if [vim-plug](https://github.com/junegunn/vim-plug) works, and install plugins
