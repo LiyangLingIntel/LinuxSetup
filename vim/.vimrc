@@ -19,6 +19,9 @@ set hidden
 " It's VIM, not VI
 set nocompatible
 
+" Enable backspace to delete blank line
+set backspace=indent,eol,start
+
 " A tab produces a 2-space indentation
 set softtabstop=2
 set shiftwidth=2
