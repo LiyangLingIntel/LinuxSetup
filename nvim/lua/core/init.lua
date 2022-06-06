@@ -43,7 +43,6 @@ require("core.theme")
 require("impatient")
 require("bufferline").setup()
 
-require("configs.autocomplete").config()
 require("configs.statusline").config()
 require("configs.filetree").config()
 require("configs.treesitter").config()
