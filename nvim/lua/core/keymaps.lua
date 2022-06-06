@@ -1,4 +1,4 @@
-vim.g.mapleader = "'"
+vim.g.mapleader = ";"
 
 local function mapkey(mode, lhs, rhs)
     vim.api.nvim_set_keymap(mode, lhs, rhs, {noremap=true})
@@ -55,31 +55,36 @@ mapcmd('<leader>pc', 'PackerClean')
 -- s: search
 mapkey('n', '<leader>ss', '/')
 mapkey('n', '<leader>sw', '/\\<lt>\\><left><left>')
+
 -- l/g/w: language
 -- l: general
 -- g: goto
 -- w: workspace
-maplua('<leader>le', 'vim.diagnostic.open_float()')
-maplua('<leader>lq', 'vim.diagnostic.setloclist()')
-maplua('<leader>lk', 'vim.lsp.buf.hover()')
-maplua('<leader>lr', 'vim.lsp.buf.rename()')
-maplua('<leader>lh', 'vim.lsp.buf.signature_help()')
-maplua('<leader>la', 'vim.lsp.buf.code_action()')
-maplua('<leader>lf', 'vim.lsp.buf.formatting()')
-mapcmd('<leader>lb', 'SymbolsOutline')
 
-maplua('<leader>gD', 'vim.lsp.buf.declaration()')
-maplua('<leader>gd', 'vim.lsp.buf.definition()')
-maplua('<leader>gt', 'vim.lsp.buf.type_definition()')
-maplua('<leader>gi', 'vim.lsp.buf.implementation()')
-maplua('<leader>gp', 'vim.diagnostic.goto_prev()')
-maplua('<leader>gn', 'vim.diagnostic.goto_next()')
-maplua('<leader>gr', 'vim.lsp.buf.references()')
+-- disable neovim lsp config
+-- maplua('<leader>le', 'vim.diagnostic.open_float()')
+-- maplua('<leader>lq', 'vim.diagnostic.setloclist()')
+-- maplua('<leader>lk', 'vim.lsp.buf.hover()')
+-- maplua('<leader>lr', 'vim.lsp.buf.rename()')
+-- maplua('<leader>lh', 'vim.lsp.buf.signature_help()')
+-- maplua('<leader>la', 'vim.lsp.buf.code_action()')
+-- maplua('<leader>lf', 'vim.lsp.buf.formatting()')
+-- mapcmd('<leader>lb', 'SymbolsOutline')
+-- maplua('<leader>gD', 'vim.lsp.buf.declaration()')
+-- maplua('<leader>gd', 'vim.lsp.buf.definition()')
+-- maplua('<leader>gt', 'vim.lsp.buf.type_definition()')
+-- maplua('<leader>gi', 'vim.lsp.buf.implementation()')
+-- maplua('<leader>gp', 'vim.diagnostic.goto_prev()')
+-- maplua('<leader>gn', 'vim.diagnostic.goto_next()')
+-- maplua('<leader>gr', 'vim.lsp.buf.references()')
+-- maplua('<leader>wa', 'vim.lsp.buf.add_workspace_folder()')
+-- maplua('<leader>wr', 'vim.lsp.buf.remove_workspace_folder()')
+-- maplua('<leader>wl', 'print(vim.inspect(vim.lsp.buf.list_workspace_folders()))')
 
-maplua('<leader>wa', 'vim.lsp.buf.add_workspace_folder()')
-maplua('<leader>wr', 'vim.lsp.buf.remove_workspace_folder()')
-maplua('<leader>wl', 'print(vim.inspect(vim.lsp.buf.list_workspace_folders()))')
 -- t: terminal
 mapcmd('<leader>tt', 'FloatermToggle')
 mapcmd('<leader>tn', 'FloatermNew')
+
+-- b: git blamer
+mapcmd('<leader>gb', 'BlamerToggle')
 

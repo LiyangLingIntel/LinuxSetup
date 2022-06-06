@@ -16,8 +16,9 @@ return require('packer').startup(function()
     use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
     -- themes (disabled other themes to optimize startup time)
-    use 'folke/tokyonight.nvim'
+--    use 'folke/tokyonight.nvim'
     use 'joshdick/onedark.vim'
+    use "projekt0n/github-nvim-theme"
 --    use { 'catppuccin/nvim', as='catppuccin' }
 --    use { 'sonph/onehalf', rtp='vim/' }
 --    use 'liuchengxu/space-vim-dark'
@@ -30,6 +31,10 @@ return require('packer').startup(function()
     }
 
     -- language
+    use 'neoclide/coc.nvim'
+    use 'universal-ctags/ctags'
+    use 'ludovicchabant/vim-gutentags'
+
     use 'neovim/nvim-lspconfig'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/cmp-buffer'
@@ -42,6 +47,7 @@ return require('packer').startup(function()
 
     -- git
     use 'airblade/vim-gitgutter' -- TODO: better git integration
+    use 'apzelos/blamer.nvim'
 
     -- status line
     use {
