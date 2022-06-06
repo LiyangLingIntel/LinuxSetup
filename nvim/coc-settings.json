@@ -1,0 +1,24 @@
+{
+  "languageserver": {
+    "lua": {
+      "command": "/Users/lingliya/devenvs/LSP/lua-language-server/bin/lua-language-server",
+      "args": [
+        "-E",
+        "/Users/lingliya/devenvs/LSP/lua-language-server/bin/main.lua"
+      ],
+      "filetypes": ["lua"],
+      "settings": {
+        "Lua": {
+          "workspace.library": {
+            "/usr/local/share/nvim/runtime/lua": true,
+            "/usr/local/share/nvim/runtime/lua/vim": true,
+            "/usr/local/share/nvim/runtime/lua/vim/lsp": true
+          },
+          "diagnostics": {
+            "globals": [ "vim" ]
+          }  
+        }
+      }
+    }
+  }
+}
