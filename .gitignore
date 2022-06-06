@@ -76,3 +76,5 @@ $RECYCLE.BIN/
 */plugin/*
 vim/.vim/plugged/
 
+nvim/coc-settings.json
+

@@ -17,7 +17,7 @@ return require('packer').startup(function()
 
     -- themes (disabled other themes to optimize startup time)
     use 'folke/tokyonight.nvim'
---    use 'joshdick/onedark.vim'
+    use 'joshdick/onedark.vim'
 --    use { 'catppuccin/nvim', as='catppuccin' }
 --    use { 'sonph/onehalf', rtp='vim/' }
 --    use 'liuchengxu/space-vim-dark'
