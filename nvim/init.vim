@@ -9,6 +9,29 @@ else
     set dictionary+=~/AppData/Local/nvim/words
 endif
 
+if exists('g:vscode')
+  lua require("theme.github_light").config()
+else
+  lua require("theme.onedark").config()
+endif
+
+" ================ Ctag Settings & vim-gutentags ===================
+" gutentags search project directory, stop recurse once find those file/folder names "
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.project']
+" generated tag file name "
+let g:gutentags_ctags_tagfile = '.tags'
+" automatically put generated tags file into ~/.cache/tags, avoid pollute project directory "
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+" create ~/.cache/tags if not exists "
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+" ctags configurations "
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxI']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
 " ======================== COC.NVIM Configuration ===========================
 
 " Some servers have issues with backup files, see COC #649.

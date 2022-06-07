@@ -5,7 +5,6 @@ function M.config()
         options = {
             icons_enabled = true,
             theme = 'auto', -- based on current vim colorscheme
-            -- not a big fan of fancy triangle separators
             component_separators = { left = '', right = ''},
             section_separators = { left = '', right = ''},
             disabled_filetypes = {},
