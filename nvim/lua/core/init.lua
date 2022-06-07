@@ -45,6 +45,7 @@ vim.g.loaded_remote_plugins    = 1
 require("impatient")
 require("bufferline").setup()
 
+require("configs.autocomplete").config()
 require("configs.statusline").config()
 require("configs.filetree").config()
 require("configs.treesitter").config()
