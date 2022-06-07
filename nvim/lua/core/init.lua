@@ -43,7 +43,7 @@ vim.g.loaded_remote_plugins    = 1
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
 require("impatient")
-require("bufferline").setup()
+require("bufferline").setup{}
 
 require("configs.autocomplete").config()
 require("configs.statusline").config()
