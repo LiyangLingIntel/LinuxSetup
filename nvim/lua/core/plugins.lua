@@ -60,8 +60,10 @@ return require('packer').startup(function()
         requires = 'nvim-lua/plenary.nvim'
     }
 
+    -- editor
+    use 'easymotion/vim-easymotion' 
+
     -- startup screen
---    use '~/Developer/aleph-nvim'
     use 'p-z-l/aleph-nvim'
 
 end)
