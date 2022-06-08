@@ -37,8 +37,12 @@ vim.g.loaded_netrwPlugin       = 1
 vim.g.loaded_tutor_mode_plugin = 1
 vim.g.loaded_remote_plugins    = 1
 
--- move this settings to init.vim to avoid conflict with vscode neovim
--- require("core.theme")
+if (vim.fn.exists('g:vscode') == 1) then
+  -- use default theme for vscode mode
+  require("theme.onedark").config()
+else
+  require("theme.onedark").config()
+end
 
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
