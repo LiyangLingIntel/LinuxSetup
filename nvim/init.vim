@@ -10,7 +10,8 @@ else
 endif
 
 if exists('g:vscode')
-  lua require("theme.github_light").config()
+  " lua require("theme.github_light").config()
+  " use default theme for vscode mode
 else
   lua require("theme.onedark").config()
 endif

@@ -67,7 +67,7 @@ return require('packer').startup(function()
     }
 
     -- editor
-    use 'easymotion/vim-easymotion' 
+    use 'easymotion/vim-easymotion'
 
     -- startup screen
     use 'p-z-l/aleph-nvim'
