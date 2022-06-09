@@ -93,5 +93,5 @@ mapcmd('<leader>so', 'SymbolsOutlineOpen')
 mapcmd('<leader>sc', 'SymbolsOutlineClose')
 
 -- e: esymotion
-mapkey('n', '<leader>es', '<Plug>(easymotion-s2)')
+mapkey('n', '<leader>e', '<Plug>(easymotion-s2)')
 
