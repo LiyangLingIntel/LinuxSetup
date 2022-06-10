@@ -68,7 +68,6 @@ maplua('<leader>lr', 'vim.lsp.buf.rename()')
 maplua('<leader>lh', 'vim.lsp.buf.signature_help()')
 maplua('<leader>la', 'vim.lsp.buf.code_action()')
 maplua('<leader>lf', 'vim.lsp.buf.formatting()')
-mapcmd('<leader>lb', 'SymbolsOutline')
 maplua('<leader>gD', 'vim.lsp.buf.declaration()')
 maplua('<leader>gd', 'vim.lsp.buf.definition()')
 maplua('<leader>gt', 'vim.lsp.buf.type_definition()')
@@ -88,7 +87,6 @@ mapcmd('<leader>tn', 'FloatermNew')
 mapcmd('<leader>gb', 'BlamerToggle')
 
 -- s: SymbolOutline
-mapcmd('<leader>sb', 'SymbolsOutline')
 mapcmd('<leader>so', 'SymbolsOutlineOpen')
 mapcmd('<leader>sc', 'SymbolsOutlineClose')
 
