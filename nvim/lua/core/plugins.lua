@@ -69,6 +69,14 @@ return require('packer').startup(function()
     -- editor
     use 'easymotion/vim-easymotion'
 
+    -- Commenter
+    use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+    }
+
     -- startup screen
     use 'p-z-l/aleph-nvim'
 

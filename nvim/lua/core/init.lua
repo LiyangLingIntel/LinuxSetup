@@ -48,6 +48,7 @@ end
 -- plugins without extra configs are configured directly here
 require("impatient")
 require("bufferline").setup{}
+require("Comment").setup{}
 
 require("configs.autocomplete").config()
 require("configs.statusline").config()
