@@ -8,6 +8,11 @@ local function mapcmd(key, cmd)
     vim.api.nvim_set_keymap('n', key, ':'..cmd..'<cr>', {noremap=true})
 end
 
+local function imapcmd(key, cmd)
+    vim.api.nvim_set_keymap('i', key, ':'..cmd..'<cr>', {noremap=true})
+end
+
+
 local function maplua(key, txt)
     vim.api.nvim_set_keymap('n', key, ':lua '..txt..'<cr>', {noremap=true})
 end
@@ -92,4 +97,8 @@ mapcmd('<leader>sc', 'SymbolsOutlineClose')
 
 -- e: esymotion
 mapkey('n', '<leader>e', '<Plug>(easymotion-s2)')
+
+-- clang-format
+mapcmd('<C-K>', 'pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py')
+imapcmd('<C-K>', 'pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py')
 

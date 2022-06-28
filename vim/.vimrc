@@ -295,8 +295,8 @@ let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 " ctrl+s to save
 :nmap <c-s> :w<CR>
 :imap <c-s> <Esc>:w<CR>a
-:map <leader>k :pyf ./.vim/tools/clang-format.py<CR>
-:imap <leader>k <c-o>:pyf ./.vim/tools/clang-format.py<CR>
+:map <leader>k :pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py<CR>
+:imap <leader>k <c-o>:pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py<CR>
 
 " ================ Vim tabs short-cuts ====================
 :nmap <leader>1 1gt
