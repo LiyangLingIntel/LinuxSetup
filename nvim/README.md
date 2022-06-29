@@ -36,7 +36,7 @@ Exclusions are listed here.
 
 * [nvim-tree](https://github.com/kyazdani42/nvim-tree.lua) 
   * `shift + i`: toggle show hidden git ignored files
-  * `shifg + h`: toggle show hidden dot files (ie. .vim)
+  * `shift + h`: toggle show hidden dot files (ie. .vim)
   * `BackSpace`: fold directory
 
 * [Comment](https://github.com/numToStr/Comment.nvim)

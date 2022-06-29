@@ -5,7 +5,7 @@ This repo includes basic configuration of setup Linux development environment.
 ## Softwares to install at first
 
 ```shell
-sudo apt update&&sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install vim git tmux curl wget python-is-python3
 ```
 
