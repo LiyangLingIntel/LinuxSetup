@@ -39,16 +39,17 @@ vim.g.loaded_remote_plugins    = 1
 
 if (vim.fn.exists('g:vscode') == 1) then
   -- use default theme for vscode mode
-  require("theme.onedark").config()
+  require("onedark").config()
 else
-  require("theme.onedark").config()
+  -- require("theme.github_dark").config()
+  require('onenord').setup()
 end
 
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
 require("impatient")
-require("bufferline").setup{}
-require("Comment").setup{}
+require("bufferline").setup()
+require("Comment").setup()
 
 require("configs.autocomplete").config()
 require("configs.statusline").config()
