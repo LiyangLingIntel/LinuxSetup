@@ -43,6 +43,7 @@ return require('packer').startup(function()
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
     use 'nvim-treesitter/nvim-treesitter'
+    use 'p00f/nvim-ts-rainbow'
     use 'onsails/lspkind-nvim'
 
     -- git
