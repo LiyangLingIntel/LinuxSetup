@@ -7,6 +7,8 @@ This repo includes basic configuration of setup Linux development environment.
 ```shell
 sudo apt update && sudo apt upgrade -y
 sudo apt install vim git tmux curl wget python-is-python3
+sudo apt install gcc g++ ccls
+sudo apt install htop
 ```
 
 ## Enable SSH Server
