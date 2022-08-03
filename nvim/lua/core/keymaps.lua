@@ -99,6 +99,6 @@ mapcmd('<leader>sc', 'SymbolsOutlineClose')
 mapkey('n', '<leader>e', '<Plug>(easymotion-s2)')
 
 -- clang-format
-mapcmd('<C-K>', 'pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py')
-imapcmd('<C-K>', 'pyf ~/devenv/LinuxSetup/vim/.vim/tools/clang-format.py')
+mapcmd('<C-K>', 'pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py')
+imapcmd('<C-K>', 'pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py')
 
