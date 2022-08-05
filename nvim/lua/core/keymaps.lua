@@ -2,20 +2,13 @@ vim.g.mapleader = ";"
 
 -- keymaps
 -- f: file tree
-vim.keymap.set("n", '<leader>ft', 'NvimTreeToggle')
-vim.keymap.set("n", '<leader>ff', 'NvimTreeFocus')
+vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')
+vim.keymap.set('n', '<leader>ff', ':NvimTreeFocus<cr>')
 -- y: telescope
-vim.keymap.set("n", '<leader>yo', "Telescope find_files")
-vim.keymap.set("n", '<leader>yg', "Telescope live_grep")
-vim.keymap.set("n", '<leader>yb', "Telescope buffers")
--- c: quick command
-vim.keymap.set('n', '<leader>ce', ':e<space>')
---vim.keymap.set("n", '<leader>cw', 'w')
---vim.keymap.set("n", '<leader>cW', 'wa')
---vim.keymap.set("n", '<leader>cE', 'e!')
---vim.keymap.set("n", '<leader>cq', 'q')
---vim.keymap.set("n", '<leader>cQ', 'q!')
---vim.keymap.set("n", '<leader>cx', 'x')
+vim.keymap.set("n", '<leader>yo', ":Telescope find_files<cr>")
+vim.keymap.set("n", '<leader>yg', ":Telescope live_grep<cr>")
+vim.keymap.set("n", '<leader>yb', ":Telescope buffers<cr>")
 
 -- w: window
 vim.keymap.set('n', '<leader>wh', '<c-w>h')
@@ -23,26 +16,28 @@ vim.keymap.set('n', '<leader>wj', '<c-w>j')
 vim.keymap.set('n', '<leader>wk', '<c-w>k')
 vim.keymap.set('n', '<leader>wl', '<c-w>l')
 vim.keymap.set('n', '<leader>w1', '<c-w>o')
-vim.keymap.set("n", '<leader>wx', 'x')
-vim.keymap.set("n", '<leader>w2', 'sp')
-vim.keymap.set("n", '<leader>w3', 'vs')
+vim.keymap.set('n', '<leader>wx', ':x<cr>')
+vim.keymap.set('n', '<leader>w2', ':sp<cr>')
+vim.keymap.set('n', '<leader>w3', ':vs<cr>')
 
 -- window resize
 vim.keymap.set('n', '<m-9>', '<c-w><')
 vim.keymap.set('n', '<m-0>', '<c-w>>')
 vim.keymap.set('n', '<m-->', '<c-w>-')
 vim.keymap.set('n', '<m-=>', '<c-w>+')
-vim.keymap.set('n', '<m-r>', 'resize<space>')
-vim.keymap.set('n', '<m-t>', 'vertical resize<space>')
 
 -- b: buffer
-vim.keymap.set("n", '<leader>bn', 'bn')
-vim.keymap.set("n", '<leader>bp', 'bp')
-vim.keymap.set("n", '<leader>bd', 'Bdelete')
+vim.keymap.set('n', '<leader>bn', ':bn<cr>')
+vim.keymap.set('n', '<leader>bp', ':bp<cr>')
+vim.keymap.set('n', '<leader>bd', ':Bdelete<cr>')
 
 -- p: plugins
-vim.keymap.set("n", '<leader>pi', 'PackerInstall')
-vim.keymap.set("n", '<leader>pc', 'PackerClean')
+vim.keymap.set('n', '<leader>pi', ':PackerInstall<cr>')
+vim.keymap.set('n', '<leader>pc', ':PackerClean<cr>')
+
+-- s: search
+vim.keymap.set('n', '<leader>ss', '/')
+vim.keymap.set('n', '<leader>sw', '/\\<lt>\\><left><left>')
 
 -- l/g/w: language
 -- l: general
@@ -82,19 +77,19 @@ vim.keymap.set("n", "<leader>en", ':Lspsaga diagnostic_jump_next<cr>')
 vim.keymap.set("n", "<leader>ep", ':Lspsaga diagnostic_jump_prev<cr>')
 
 -- t: terminal
-vim.keymap.set("n", '<leader>tt', 'FloatermToggle')
-vim.keymap.set("n", '<leader>tn', 'FloatermNew')
+vim.keymap.set('n', '<leader>tt', ':FloatermToggle<cr>')
+vim.keymap.set('n', '<leader>tn', ':FloatermNew<cr>')
 
 -- b: git blamer
-vim.keymap.set("n", '<leader>gb', 'BlamerToggle')
+vim.keymap.set("n", '<leader>gb', ':BlamerToggle<cr>')
 
 -- e: esymotion
 vim.keymap.set('n', '<leader>e', '<Plug>(easymotion-s2)')
 
 -- clang-format
-vim.keymap.set("n", '<C-K>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py')
-vim.keymap.set("i", '<C-K><c-o>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py')
-vim.keymap.set("n", '<C-F><C-K>', 'ggvG :pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py')
+vim.keymap.set("n", '<C-K>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>')
+vim.keymap.set("i", '<C-K><c-o>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>')
+vim.keymap.set("n", '<C-F><C-K>', 'ggvG :pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>')
 
 -- h: git
 vim.keymap.set('n', '<leader>hu', ':Gitsigns undo_stage_hunk<cr>')
