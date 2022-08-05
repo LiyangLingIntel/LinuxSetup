@@ -49,7 +49,6 @@ end
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
 require("impatient")
-require("bufferline").setup()
 require("Comment").setup()
 
 require("configs.autocomplete").config()
@@ -58,4 +57,6 @@ require("configs.filetree").config()
 require("configs.treesitter").config()
 require("configs.outlinetree").config()
 require("configs.startscreen").config()
-
+require("configs.git").config()
+require("configs.bufferline").config()
+require("configs.grammar").config()
