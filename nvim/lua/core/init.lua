@@ -1,22 +1,22 @@
 -- basics
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
-vim.opt.number          = true
-vim.opt.relativenumber  = false
-vim.opt.termguicolors   = true
-vim.opt.shiftround      = true
-vim.opt.updatetime      = 100
-vim.opt.cursorline      = true
-vim.opt.autowrite       = true
+vim.opt.number         = true
+vim.opt.relativenumber = false
+vim.opt.termguicolors  = true
+vim.opt.shiftround     = true
+vim.opt.updatetime     = 100
+vim.opt.cursorline     = true
+vim.opt.autowrite      = true
 if (vim.fn.has('termguicolors') == 1) then
-    vim.opt.termguicolors = true
+  vim.opt.termguicolors = true
 end
 -- tabs
-vim.opt.autoindent      = true
-vim.opt.tabstop         = 2
-vim.opt.shiftwidth      = 2
-vim.opt.softtabstop     = 2
-vim.opt.expandtab       = true
+vim.opt.autoindent  = true
+vim.opt.tabstop     = 2
+vim.opt.shiftwidth  = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab   = true
 
 require("core.keymaps")
 require("core.plugins")

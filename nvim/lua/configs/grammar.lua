@@ -1,6 +1,6 @@
 local M = {}
 function M.config()
-	vim.cmd([[
+  vim.cmd([[
      let g:grammarous#languagetool_cmd = 'languagetool'
 	 nmap <leader>ec :GrammarousCheck<cr>
 	 nmap <leader>eR :GrammarousReset<cr>
@@ -20,7 +20,7 @@ function M.config()
          \        'CURRENCY', 'POSSESSIVE_APOSTROPHE', 'ENGLISH_WORD_REPEAT_RULE',
          \        'NON_STANDARD_WORD'],
          \ }
-]]);
+]] );
 end
 
 return M
