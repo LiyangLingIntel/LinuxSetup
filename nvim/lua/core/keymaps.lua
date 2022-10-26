@@ -91,6 +91,8 @@ vim.keymap.set("n", '<C-K>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-for
 vim.keymap.set("v", '<C-K>', ":'<,'> :pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>")
 vim.keymap.set("i", '<C-K><c-o>', ':pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>')
 vim.keymap.set("n", '<C-F><C-K>', 'ggvG :pyf ~/devenvs/LinuxSetup/vim/.vim/tools/clang-format.py<cr>')
+vim.keymap.set("n", '<leader>fp', ':Autopep8<cr>')
+vim.keymap.set("v", '<leader>fp', ':Autopep8<cr>')
 
 -- h: git
 vim.keymap.set('n', '<leader>hu', ':Gitsigns undo_stage_hunk<cr>')
