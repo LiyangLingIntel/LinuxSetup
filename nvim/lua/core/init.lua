@@ -1,4 +1,4 @@
--- basics
+-- basicsinit
 vim.cmd('syntax on')
 vim.cmd('filetype plugin indent on')
 vim.opt.number         = true
@@ -9,17 +9,22 @@ vim.opt.updatetime     = 100
 vim.opt.cursorline     = true
 vim.opt.autowrite      = true
 if (vim.fn.has('termguicolors') == 1) then
-  vim.opt.termguicolors = true
+    vim.opt.termguicolors = true
 end
 -- tabs
-vim.opt.autoindent  = true
-vim.opt.tabstop     = 2
-vim.opt.shiftwidth  = 2
-vim.opt.softtabstop = 2
-vim.opt.expandtab   = true
+vim.opt.autoindent    = true
+vim.opt.tabstop       = 4
+vim.opt.shiftwidth    = 4
+vim.opt.softtabstop   = 4
+vim.opt.mouse         = 'a'
+vim.opt.expandtab     = true
+vim.opt.autowrite     = false
+vim.opt.wrap          = false
+vim.opt.formatoptions = ''
 
-require("core.keymaps")
 require("core.plugins")
+require("core.gui")
+require("core.keymaps")
 -- disable some useless standard plugins to save startup time
 -- these features have been better covered by plugins
 vim.g.loaded_matchparen        = 1
@@ -46,17 +51,33 @@ else
   -- require('onenord').setup()
 end
 
+require('image').setup {
+  min_padding = 5,
+  show_label = true,
+  render_using_dither = true,
+}
+
 -- Load plugin configs
 -- plugins without extra configs are configured directly here
 require("impatient")
 require("Comment").setup()
 
+require("indent_blankline").setup {
+    space_char_blankline = " ",
+    show_current_context = true,
+    show_current_context_start = true,
+}
+
 require("configs.autocomplete").config()
 require("configs.statusline").config()
-require("configs.filetree").config()
+-- require("configs.filetree").config()
 require("configs.treesitter").config()
-require("configs.outlinetree").config()
+-- require("configs.outlinetree").config()
 require("configs.startscreen").config()
 require("configs.git").config()
 require("configs.bufferline").config()
 require("configs.grammar").config()
+require("configs.terminal").config()
+require("configs.ide").config()
+require("configs.scrollbar").config()
+require("configs.telescope").config()

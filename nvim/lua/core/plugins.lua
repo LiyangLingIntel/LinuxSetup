@@ -1,89 +1,105 @@
 -- packer.nvim
 vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function()
-  use 'wbthomason/packer.nvim'
+    use 'wbthomason/packer.nvim'
 
-  -- starup time optimise
-  use 'dstein64/vim-startuptime'
-  use 'lewis6991/impatient.nvim'
-  use 'nathom/filetype.nvim'
+    use 'nvim-lua/plenary.nvim'
+    use 'MunifTanjim/nui.nvim'
 
-  -- buffer
-  use {
-    'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
-  use 'moll/vim-bbye' -- for more sensible delete buffer cmd
+    -- IDE-like side panels
+    use 'ldelossa/nvim-ide'
 
-  -- themes (disabled other themes to optimize startup time)
-  --    use 'folke/tokyonight.nvim'
-  use 'navarasu/onedark.nvim'
-  use "projekt0n/github-nvim-theme"
-  use 'rmehri01/onenord.nvim'
-  --    use { 'catppuccin/nvim', as='catppuccin' }
-  --    use { 'sonph/onehalf', rtp='vim/' }
-  --    use 'liuchengxu/space-vim-dark'
-  --    use 'ahmedabdulrahman/aylin.vim'
+    -- starup time optimise
+    use 'dstein64/vim-startuptime'
+    use 'lewis6991/impatient.nvim'
 
-  -- file tree
-  use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
+    -- buffer
+    use {
+        'akinsho/bufferline.nvim',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
+    use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
-  -- language
-  use 'neovim/nvim-lspconfig'
-  use 'glepnir/lspsaga.nvim'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/nvim-cmp'
-  use 'L3MON4D3/LuaSnip'
-  use 'nvim-treesitter/nvim-treesitter'
-  use 'p00f/nvim-ts-rainbow'
-  use 'tell-k/vim-autopep8'
+    -- themes (disabled other themes to optimize startup time)
+    --    use 'folke/tokyonight.nvim'
+    use 'navarasu/onedark.nvim'
+    use "projekt0n/github-nvim-theme"
+    --    use { 'catppuccin/nvim', as='catppuccin' }
+    --    use { 'sonph/onehalf', rtp='vim/' }
+    --    use 'liuchengxu/space-vim-dark'
+    --    use 'ahmedabdulrahman/aylin.vim'
 
-  -- git
-  use {
-    'lewis6991/gitsigns.nvim',
-    tag = 'release',
-  }
-  use 'apzelos/blamer.nvim'
+    -- file tree
+    use {
+        'kyazdani42/nvim-tree.lua',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
 
-  -- status line
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
-  }
+    -- language
+    use 'neovim/nvim-lspconfig'
+    use 'glepnir/lspsaga.nvim'
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use 'hrsh7th/nvim-cmp'
+    use 'L3MON4D3/LuaSnip'
+    use 'nvim-treesitter/nvim-treesitter'
+    use 'p00f/nvim-ts-rainbow'
+    use 'tell-k/vim-autopep8'
+    use 'dnlhc/glance.nvim'
+    use {
+        'folke/trouble.nvim',
+        requires = 'kyazdani42/nvim-web-devicons',
+    }
 
-  -- tagbar
-  use 'simrat39/symbols-outline.nvim'
+    -- git
+    use {
+        'lewis6991/gitsigns.nvim',
+        tag = 'release'
+    }
+    use 'apzelos/blamer.nvim'
 
-  -- floating terminal
-  use 'voldikss/vim-floaterm'
+    -- status line
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = 'kyazdani42/nvim-web-devicons'
+    }
 
-  -- file telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = 'nvim-lua/plenary.nvim'
-  }
+    -- floating terminal
+    use 'akinsho/toggleterm.nvim'
 
-  -- editor
-  use 'easymotion/vim-easymotion'
+    -- file telescope
+    use 'BurntSushi/ripgrep'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = 'nvim-lua/plenary.nvim'
+    }
 
-  -- Commenter
-  use {
-    'numToStr/Comment.nvim',
-    config = function()
-      require('Comment').setup()
-    end
-  }
+    -- editor
+    use 'easymotion/vim-easymotion'
 
-  -- startup screen
-  use 'p-z-l/aleph-nvim'
+    -- Commenter
+    use {
+        'numToStr/Comment.nvim',
+        config = function()
+            require('Comment').setup()
+        end
+    }
 
-  -- english grammar check
-  use 'rhysd/vim-grammarous'
+    -- indent guide
+    use 'lukas-reineke/indent-blankline.nvim'
+
+    -- startup screen
+    use 'leslie255/aleph-nvim'
+
+    -- scroll bar
+    use 'petertriho/nvim-scrollbar'
+
+    -- ascii image
+    use 'samodostal/image.nvim'
+
+    -- english grammar check
+    use 'rhysd/vim-grammarous'
 
 end)
