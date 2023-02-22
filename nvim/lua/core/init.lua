@@ -37,6 +37,10 @@ vim.g.loaded_netrwPlugin       = 1
 vim.g.loaded_tutor_mode_plugin = 1
 vim.g.loaded_remote_plugins    = 1
 
+-- On StartUp
+local filetree                 = require('configs.filetree')
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = filetree.open_nvim_tree })
+
 if (vim.fn.exists('g:vscode') == 1) then
   -- use default theme for vscode mode
   require("onedark").setup()
