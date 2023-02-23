@@ -47,7 +47,6 @@ if (vim.fn.exists('g:vscode') == 1) then
 else
   -- require("theme.github_dark").config()
   require("theme.onedark").config()
-  -- require('onenord').setup()
 end
 
 -- Load plugin configs

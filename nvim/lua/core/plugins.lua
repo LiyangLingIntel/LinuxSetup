@@ -19,7 +19,6 @@ return require('packer').startup(function()
   --    use 'folke/tokyonight.nvim'
   use 'navarasu/onedark.nvim'
   use "projekt0n/github-nvim-theme"
-  use 'rmehri01/onenord.nvim'
   --    use { 'catppuccin/nvim', as='catppuccin' }
   --    use { 'sonph/onehalf', rtp='vim/' }
   --    use 'liuchengxu/space-vim-dark'
@@ -41,7 +40,7 @@ return require('packer').startup(function()
   use 'hrsh7th/nvim-cmp'
   use 'L3MON4D3/LuaSnip'
   use 'nvim-treesitter/nvim-treesitter'
-  use 'p00f/nvim-ts-rainbow'
+  use 'HiPhish/nvim-ts-rainbow2'
   use 'tell-k/vim-autopep8'
 
   -- git
