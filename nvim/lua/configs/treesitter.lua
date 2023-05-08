@@ -8,7 +8,7 @@ function M.config()
     ignore_install = {}, -- parsers to not install
     highlight = {
       enable = true,
-      additional_vim_regex_highlighting = true, -- enable standard vim highlighting
+      additional_vim_regex_highlighting = false, -- enable standard vim highlighting
     },
     rainbow = {
       enable = true,
