@@ -11,7 +11,7 @@ return require('packer').startup(function()
   -- buffer
   use {
     'akinsho/bufferline.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = 'nvim-tree/nvim-web-devicons'
   }
   use 'moll/vim-bbye' -- for more sensible delete buffer cmd
 
@@ -26,8 +26,9 @@ return require('packer').startup(function()
 
   -- file tree
   use {
-    'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons'
+    'nvim-tree/nvim-tree.lua',
+    tag = "*",
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 
   -- language
@@ -46,14 +47,14 @@ return require('packer').startup(function()
   -- git
   use {
     'lewis6991/gitsigns.nvim',
-  -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
+    -- tag = 'release' -- To use the latest release (do not use this if you run Neovim nightly or dev builds!)
   }
   use 'apzelos/blamer.nvim'
 
   -- status line
   use {
     'nvim-lualine/lualine.nvim',
-    requires = 'kyazdani42/nvim-web-devicons'
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
 
   -- tagbar
@@ -84,5 +85,4 @@ return require('packer').startup(function()
 
   -- english grammar check
   use 'rhysd/vim-grammarous'
-
 end)

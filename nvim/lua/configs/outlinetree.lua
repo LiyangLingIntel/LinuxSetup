@@ -64,6 +64,7 @@ function M.config()
       Fragment = { icon = "", hl = "@constant" },
     }
   }
+  require("symbols-outline").setup()
 end
 
 return M
