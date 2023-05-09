@@ -3,8 +3,8 @@
 This config is a folk of [leslie255/nvim-config](https://github.com/leslie255/nvim-config) with some self defined configuration.
 
 ## Setup
-0. Use the latest version of NVIM(0.7.0+)
-Since ubuntu package management tool does not install the lastet neovim, we should download it from [github nvim v0.7.2 release](https://github.com/neovim/neovim/releases/tag/v0.7.2).
+0. Use the latest version of NVIM(0.8.0+)
+Since ubuntu package management tool does not install the lastet neovim, we should download it from [github nvim v0.8.2 release](https://github.com/neovim/neovim/releases/tag/v0.8.2).
 ```shell
 $ wget https://github.com/neovim/neovim/releases/download/v0.7.2/nvim-linux64.deb
 ```

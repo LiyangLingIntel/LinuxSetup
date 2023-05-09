@@ -79,7 +79,7 @@ function M.config()
         -- This can be used to change how bufferline fetches the icon
         -- for an element e.g. a buffer or a tab.
         -- e.g.
-        return require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = true })
+        return require('nvim-web-devicons').get_icon_by_filetype(element.filetype, { default = false })
       end,
       show_buffer_icons = true, -- disable filetype icons for buffers
       show_buffer_close_icons = true,
