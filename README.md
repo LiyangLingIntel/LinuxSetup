@@ -50,7 +50,7 @@ sudo apt install htop
   * Install Oh-My-Zsh
 
     ```shell
-    sh -c "$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)"
+    sh -c "$(wget -O- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
     ```
 
   * Install Plugins for ZSH
