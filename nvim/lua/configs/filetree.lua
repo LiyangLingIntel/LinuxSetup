@@ -7,13 +7,16 @@ function M.config()
     hijack_cursor = false,
     hijack_netrw = true,
     hijack_unnamed_buffer_when_opening = false,
+    ignore_buffer_on_setup = false,
+    open_on_setup = false,
+    open_on_setup_file = false,
     sort_by = "name",
     root_dirs = {},
     prefer_startup_root = false,
     sync_root_with_cwd = false,
     reload_on_bufenter = false,
     respect_buf_cwd = false,
-    on_attach = "default",
+    on_attach = "disable",
     remove_keymaps = false,
     select_prompts = false,
     view = {
@@ -113,10 +116,11 @@ function M.config()
       auto_open = true,
     },
     update_focused_file = {
-      enable = true,
+      enable = false,
       update_root = false,
       ignore_list = {},
     },
+    ignore_ft_on_setup = {},
     system_open = {
       cmd = "",
       args = {},
@@ -219,11 +223,6 @@ function M.config()
       confirm = {
         remove = true,
         trash = true,
-      },
-    },
-    experimental = {
-      git = {
-        async = true,
       },
     },
     log = {
