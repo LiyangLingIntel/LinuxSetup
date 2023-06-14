@@ -24,6 +24,18 @@ $ ln -s /path/to/LinuxSetup/nvim ~/.config/nvim
 
 4. This setup uses the modern LSP system for langauge support, things like auto-complete, symbols tree, etc..., **which requires a LSP server outside the editor**. Fortunately [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) manages to configure most of the LSP server options for us, all we need to do is to install the LSP servers themselves:<br>
 In `lua/configs/autocomplete.lua`, line `51`, edit the list of LSP servers, a complete list of supported LSP servers is listed [here](https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md). After that install the corresponding servers on your OS, auto-complete should pop up for supported languages now :)
+  * Install [clangd](https://clangd.llvm.org/installation.html)
+    ```shell
+    # Try to install a packaged release (12.0):
+    sudo apt-get install clangd-12
+    # This will install clangd as /usr/bin/clangd-12. Make it the default clangd:
+    sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
+    ```
+  * Install [py-lsp-server](https://github.com/python-lsp/python-lsp-server)
+    ```shell
+    pip install python-lsp-server
+    pip install autopep8
+    ```
 
 5. Final step, smart highlighting using treesitter!<br>
 The default vim regex-based highlighting is pretty lame, for NVIM, [treesitter](https://github.com/nvim-treesitter/nvim-treesitter) offered an advanced code highlighting that can make your code much cleaner<br>

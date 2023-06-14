@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>lk', vim.lsp.buf.hover)
 vim.keymap.set('n', '<leader>lr', vim.lsp.buf.rename)
 vim.keymap.set('n', '<leader>lh', vim.lsp.buf.signature_help)
 vim.keymap.set('n', '<leader>la', vim.lsp.buf.code_action)
-vim.keymap.set('n', '<leader>lf', vim.lsp.buf.formatting)
+vim.keymap.set('n', '<leader>lf', vim.lsp.buf.format)
 vim.keymap.set('n', '<leader>lb', ':SymbolsOutline<cr>')
 vim.keymap.set('n', '<f4>', ':SymbolsOutline<cr>')
 
