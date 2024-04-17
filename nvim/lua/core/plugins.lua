@@ -81,9 +81,6 @@ return require('packer').startup(function()
     end
   }
 
-  -- startup screen
-  use 'p-z-l/aleph-nvim'
-
   -- english grammar check
   use 'rhysd/vim-grammarous'
 end)
