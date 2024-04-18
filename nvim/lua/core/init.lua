@@ -45,10 +45,10 @@ vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = filetree.open_nvim_tree
 
 if (vim.fn.exists('g:vscode') == 1) then
   -- use default theme for vscode mode
-  require("onedark").setup()
+  require("onenord").setup()
 else
   -- require("theme.github_dark").config()
-  require("theme.onedark").config()
+  require("theme.onenord").config()
 end
 
 -- Load plugin configs

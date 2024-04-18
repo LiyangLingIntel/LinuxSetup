@@ -18,7 +18,7 @@ return require('packer').startup(function()
   -- themes (disabled other themes to optimize startup time)
   --    use 'folke/tokyonight.nvim'
   use 'navarasu/onedark.nvim'
-  use "projekt0n/github-nvim-theme"
+  use 'rmehri01/onenord.nvim'
   --    use { 'catppuccin/nvim', as='catppuccin' }
   --    use { 'sonph/onehalf', rtp='vim/' }
   --    use 'liuchengxu/space-vim-dark'
