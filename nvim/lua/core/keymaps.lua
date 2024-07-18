@@ -6,9 +6,11 @@ vim.keymap.set('n', '<F3>', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ft', ':NvimTreeToggle<cr>')
 vim.keymap.set('n', '<leader>ff', ':NvimTreeFocus<cr>')
 -- y: telescope
-vim.keymap.set("n", '<leader>yo', ":Telescope find_files<cr>")
-vim.keymap.set("n", '<leader>yg', ":Telescope live_grep<cr>")
-vim.keymap.set("n", '<leader>yb', ":Telescope buffers<cr>")
+local telescope = require('telescope.builtin')
+vim.keymap.set("n", '<leader>yo', telescope.find_files, {})
+vim.keymap.set("n", '<leader>yg', telescope.live_grep, {})
+vim.keymap.set("n", '<leader>yb', telescope.buffers, {})
+vim.keymap.set("n", '<leader>yh', telescope.help_tags, {})
 
 -- w: window
 vim.keymap.set('n', '<leader>wh', '<c-w>h')
