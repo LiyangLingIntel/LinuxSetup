@@ -54,6 +54,7 @@ function M.config()
       highlight_diagnostics = "none",
       highlight_opened_files = "none",
       highlight_modified = "none",
+      -- highlight_hidden = "none",
       highlight_bookmarks = "none",
       highlight_clipboard = "name",
       indent_markers = {
@@ -80,6 +81,7 @@ function M.config()
         },
         git_placement = "before",
         modified_placement = "after",
+        -- hidden_placement = "after",
         diagnostics_placement = "signcolumn",
         bookmarks_placement = "signcolumn",
         padding = " ",
@@ -90,6 +92,7 @@ function M.config()
           folder_arrow = true,
           git = true,
           modified = true,
+          -- hidden = false,
           diagnostics = true,
           bookmarks = true,
         },
@@ -98,6 +101,7 @@ function M.config()
           symlink = "",
           bookmark = "󰆤",
           modified = "●",
+          -- hidden = "󰜌",
           folder = {
             arrow_closed = "",
             arrow_open = "",
@@ -125,7 +129,7 @@ function M.config()
       auto_open = true,
     },
     update_focused_file = {
-      enable = false,
+      enable = true,
       update_root = {
         enable = false,
         ignore_list = {},
@@ -246,7 +250,13 @@ function M.config()
         default_yes = false,
       },
     },
-    experimental = {},
+    experimental = {
+      actions = {
+        open_file = {
+          relative_path = false,
+        },
+      },
+    },
     log = {
       enable = false,
       truncate = false,
